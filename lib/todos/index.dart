@@ -76,6 +76,9 @@ class _TodosState extends State<Todos> {
                       if (_textEditing.value.text.isNotEmpty) {
                         if (asignatura != null) {
                           asignaturas[id!].nombre = _textEditing.value.text;
+                          this.setState(() {
+                            asignaturas;
+                          });
                         } else {
                           asignaturas.add(Asignatura(
                               codigo: Uuid().v4(),
